@@ -4,7 +4,7 @@ on:
     branches:
       - master
 
-  build_exe:
+  build_on_win:
     name: Build Electron (Window)
     runs-on: windows-latest
     steps:
