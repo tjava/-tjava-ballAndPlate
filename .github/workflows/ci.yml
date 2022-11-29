@@ -4,13 +4,14 @@ on:
     branches:
       - master
 
-  build_on_win:
-    name: Build Electron (Window)
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@master
-        with:
-          node-version: 16.13.0
-      - run: npm install
-      - run: npm run make
+  jobs:
+    build_on_win:
+      name: Build Electron (Window)
+      runs-on: windows-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@master
+          with:
+            node-version: 16.13.0
+        - run: npm install
+        - run: npm run make
